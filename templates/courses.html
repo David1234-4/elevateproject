@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elevate - Courses</title>
+    <link rel="stylesheet" href="{%static 'css/styles.css'%}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/courses" class="active">Courses</a></li>
+                <li><a href="/profiles">Profile</a></li>
+                <li><a href="/downloads">Downloads</a></li>
+            </ul>
+            <button id="login-btn">Login</button>
+        </nav>
+    </header>
+    <main>
+        <h1>Courses</h1>
+        <section id="course-categories">
+            <h2>Course Categories</h2>
+            <ul>
+                <li><a href="                          
+                <li><a href="#math">Math</a></li>
+                <li><a href="                              
+                <li><a href="#humanities">Humanities</a></li>
+            </ul>
+        </section>
+        <section id="science">
+            <h2>Science Courses</h2>
+            <div class="course-grid">
+                <div class="course-card">
+                    <img src="biology-image.jpg" alt="Biology Image">
+                    <h3>Biology</h3>
+                    <p>Learn about living organisms and their interactions.</p>
+                    <button>Enroll</button>
+                </div>
+                <div class="course-card">
+                    <img src="chemistry-image.jpg" alt="Chemistry Image">
+                    <h3>Chemistry</h3>
+                    <p>Study the composition and properties of matter.</p>
+                    <button>Enroll</button>
+                </div>
+                <div class="course-card">
+                    <img src="physics-image.jpg" alt="Physics Image">
+                    <h3>Physics</h3>
+                    <p>Explore the fundamental laws of the universe.</p>
+                    <button>Enroll</button>
+                </div>
+            </div>
+        </section>
+        <section id="math">
+            <h2>Math Courses</h2>
+            <div class="course-grid">
+                <div class="course-card">
+                    <img src="algebra-image.jpg" alt="Algebra Image">
+                    <h3>Algebra</h3>
+                    <p>Solve equations and manipulate variables.</p>
+                    <button>Enroll</button>
+                </div>
+                <div class="course-card">
+                    <img src="geometry-image.jpg" alt="Geometry Image">
+                    <h3>Geometry</h3>
+                    <p>Study shapes and their properties.</p>
+                    <button>Enroll</button>
+                </div>
+                <div class="course-card">
+                    <img src="calculus-image.jpg" alt="Calculus Image">
+                    <h3>Calculus</h3>
+                    <p>Understand rates of change and accumulation.</p>
+                    <button>Enroll</button>
+                </div>
+            </div>
+        </section>
+        <!-- Add more sections for languages and humanities -->
+    </main>
+    <footer>
+        <h2>Contact Us</h2>
+        <p>Email: <a href="mailto:info@elevate.com">info@elevate.com</a></p>
+        <p>Phone: +256 123 456 789</p>
+        <p>Address: 123 Main Street, Kampala, Uganda</p>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="login-modal" style="display: none;">
+        <h2>Login</h2>
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username"><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"><br><br>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

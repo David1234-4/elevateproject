@@ -22,6 +22,12 @@ header nav ul li {
     margin-right: 20px;
 }
 
+#heading{
+background-color:#007bff;
+color:white;
+align:center;
+}
+
 header nav a {
     color: #fff;
     text-decoration: none;
@@ -90,4 +96,102 @@ footer {
 footer a {
     color: #66b3ff;
     text-decoration: none;
+}
+
+/* Add to existing styles.css */
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.course-card {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.course-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.course-card h3 {
+    margin-top: 0;
+}
+
+.course-card button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.course-card button:hover {
+    background-color: #66b3ff;
+}
+
+/* Add to existing styles.css */
+
+#profile-info {
+    text-align: center;
+}
+
+#profile-info img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 20px;
+}
+
+#enrolled-courses ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#enrolled-courses li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#enrolled-courses img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+#enrolled-courses progress {
+    width: 100%;
+    height: 10px;
+    margin-left: 20px;
+}
+
+#achievements ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#achievements li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#achievements img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 20px;
 }
