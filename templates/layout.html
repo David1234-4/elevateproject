@@ -1,15 +1,39 @@
- GNU nano 8.3        home.html
 <!DOCTYPE html>
 {%load static%}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-w>
-    <title>
-{%block%}
-Elevate - Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title  %}Elevate{% block  %}</title>
     <h1 id= "heading">Elevate</h1>
-    <link rel="stylesheet" href="{% static 'css/s>
-    <script src="{% static 'js/main.js'%}" defer >
+    <link rel="stylesheet" href="{% static 'css/styles.css'%}">
+    <script src="{% static 'js/main.js'%}" defer ></script>
 </head>
 <body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/" class="active">Home</a></li>
+                <li><a href="/courses">Courses</a></li>
+                <li><a href="/profile">Profile</a></li>
+                <li><a href="/downloads">Downloads</a></li>
+            </ul>
+            <button id="login-btn">Login</button>
+        </nav>
+    </header>
+    <main>
+{% block content  %}
+{% endblock  %}
+  
+    </main>
+    <footer>
+        <h2>Contact Us</h2>
+        <p>Email: <a href="mailto:info@elevate.com">info@elevate.com</a></p>
+        <p>Phone: +256 123 456 789</p>
+        <p>Address: 123 Main Street, Kampala, Uganda</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
