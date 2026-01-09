@@ -1,60 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elevate - Posts</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="/">Home page</a></li>
-                <li><a href="/courses">Courses</a></li>
-                <li><a href="/profile">Profile</a></li>
-                <li><a href="/downloads">Downloads</a></li>
-                <li><a href="/post_list" class="active">Posts</a></li>
-            </ul>
-            <button id="login-btn">Login</button>
-        </nav>
-    </header>
-    <main>
-        <h1>Posts</h1>
-        <section id="post-list">
-            <ul>
-                <!-- Post list will be generated here -->
-            </ul>
-        </section>
-        <section id="pagination">
-            <ul>
-                <li><a href="                    
-                <li><a href="#">1</a></li>
-                <li><a href="             
-                <li><a href="#">3</a></li>
-                <li><a href="                
-            </ul>
-        </section>
-    </main>
-    <footer>
-        <h2>Contact Us</h2>
-        <p>Email: <a href="mailto:info@elevate.com">info@elevate.com</a></p>
-        <p>Phone: +256 123 456 789</p>
-        <p>Address: 123 Main Street, Kampala, Uganda</p>
-    </footer>
+{% extends 'layout.html'  %}
+{% block title  %}
+elevate posts
+{% endblock  %}
+{% block content  %}
 
-    <!-- Login Modal -->
-    <div id="login-modal" style="display: none;">
-        <h2>Login</h2>
-        <form>
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username"><br><br>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password"><br><br>
-            <button type="submit">Login</button>
-        </form>
-    </div>
+<ul>
+    {% for post in posts %}
+        <li>
+            <h2>{{ post.title }}</h2>
+            <p>{{ post.content }}</p>
+            <p>Author: {{ post.author }}</p>
+        </li>
+    {% endfor %}
+</ul>
 
-    <script src="script.js"></script>
-</body>
-</html>
+
+{% endblock  %}
