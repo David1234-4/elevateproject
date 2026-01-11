@@ -195,3 +195,73 @@ footer a {
     object-fit: cover;
     margin-right: 20px;
 }
+
+/* Posts Page Styles */
+
+.posts-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.post {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.post:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.post-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.post-content {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.post-author {
+    font-size: 14px;
+    color: #666;
+}
+
+.post-meta {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.post-meta a {
+    text-decoration: none;
+    color: #337ab7;
+}
+
+.post-meta a:hover {
+    color: #23527c;
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination a {
+    text-decoration: none;
+    color: #337ab7;
+    margin: 0 10px;
+}
+
+.pagination a:hover {
+    color: #23527c;
+}

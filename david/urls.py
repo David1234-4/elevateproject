@@ -23,6 +23,5 @@ urlpatterns = [
     path('',views.homepage),
     path('courses/',views.courses),
     path('profiles/',views.profiles),
-    path('downloads/',views.downloads),
     path('posts/',include('posts.urls')),
 ]

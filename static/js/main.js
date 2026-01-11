@@ -52,3 +52,32 @@ progressBars.forEach((bar) => {
     const percentage = (value / max) * 100;
     bar.style.background = `linear-gradient(to right, #007bff ${percentage}%, #ccc ${percentage}%)`;
 });
+
+
+// Posts Page JavaScript Code
+
+// Add event listener to post titles
+document.addEventListener('DOMContentLoaded', () => {
+    const postTitles = document.querySelectorAll('.post-title a');
+    postTitles.forEach((title) => {
+        title.addEventListener('click', (e) => {
+            e.preventDefault();
+            const postId = title.dataset.postId;
+            // Add logic to handle post click
+            console.log(`Post ${postId} clicked`);
+        });
+    });
+});
+
+// Add event listener to pagination links
+document.addEventListener('DOMContentLoaded', () => {
+    const paginationLinks = document.querySelectorAll('.pagination a');
+    paginationLinks.forEach((link) => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const pageNumber = link.dataset.pageNumber;
+            // Add logic to handle pagination click
+            console.log(`Page ${pageNumber} clicked`);
+        });
+    });
+});
