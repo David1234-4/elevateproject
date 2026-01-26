@@ -26,6 +26,7 @@ urlpatterns = [
     path('profiles/',views.profiles),
     path('courses/',views.courses),
     path('posts/',include('posts.urls')),
+    path('downloads/',views.downloads),
 ]
 
 

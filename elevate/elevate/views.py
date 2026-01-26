@@ -10,3 +10,6 @@ def courses(request):
 
 def profiles(request):
     return render(request,'profiles.html')
+
+def downloads(request):
+    return render(request, 'downloads.html')
