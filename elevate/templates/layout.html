@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title  %}Elevate{% endblock  %}</title>
+    <h1 id= "heading">Elevate</h1>
+    <link rel="stylesheet" href="{% static 'css/styles.css'%}">
+    <script src="{% static 'js/main.js'%}" defer ></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/" class="active">Home</a></li>
+                <li><a href="/courses">Courses</a></li>
+                <li><a href="/profiles">Profile</a></li>
+               <li><a href="{% url 'posts:list'  %}">posts</a></li>
+            </ul>
+            <button id="login-btn">Login</button>
+        </nav>
+    </header>
+    <main>
+{% block content  %}
+{% endblock  %}
+  
+    </main>
+    <footer>
+        <h2>Contact Us</h2>
+        <p>Email: <a href="mailto:info@elevate.com">info@elevate.com</a></p>
+        <p>Phone: +256 123 456 789</p>
+        <p>Address: 123 Main Street, Kampala, Uganda</p>
+    </footer>
+
+</body>
+</html>
+
