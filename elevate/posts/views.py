@@ -9,3 +9,6 @@ def post_page(request,slug):
 #    return HttpResponse(slug)
     posts = Post.objects.get(slug=slug)
     return render(request,'posts/post_page.html',{'Post':Post})
+
+def post_new(request):
+    return render(request,'posts/post_new.html')

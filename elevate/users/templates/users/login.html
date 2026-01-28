@@ -1,0 +1,21 @@
+{% extends 'layout.html'  %}
+{% block title  %}
+elevate login
+{% endblock  %}
+{% block content  %}
+  <h1> Login to the elevate site  </h1>
+<form action="/users/login/" method = "POST">
+<form method="POST">
+    {% csrf_token %}
+
+    {{ form.as_p }}
+{% if form.errors %}
+        <div style="color:red;">
+            {{ form.errors }}
+        </div>
+    {% endif %}
+
+    <button type="submit">Login</button>
+
+</form>
+{% endblock %}

@@ -13,12 +13,10 @@
     <header>
         <nav>
             <ul>
-                <li><a href="/" class="active">Home</a></li>
+                <li><a href="/" >Home</a></li>
                 <li><a href="/courses">Courses</a></li>
-                <li><a href="/profiles">Profile</a></li>
                <li><a href="{% url 'posts:list'  %}">posts</a></li>
             </ul>
-         
         </nav>
     </header>
     <main>
@@ -27,12 +25,9 @@
   
     </main>
     <footer>
-        <form action = "{% url 'users:logout' %}" method="POST" >
-
-{% csrf_token %}
-<button class="logout">logout</button>
-</form>
         <h2>Contact Us</h2>
+<button id="login-btn"><a href="{% url 'users:register' %}">Sign up</a></button>
+<button id="login-btn"><a href="{% url 'users:login' %}">login</a></button>
         <p>Email: <a href="mailto:info@elevate.com">info@elevate.com</a></p>
         <p>Phone: +256 123 456 789</p>
         <p>Address: 123 Main Street, Kampala, Uganda</p>

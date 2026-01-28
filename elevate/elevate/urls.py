@@ -23,11 +23,15 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.homepage),
-    path('profiles/',views.profiles),
+    path('profiles/',views.profiles, name="profiles"),
     path('courses/',views.courses),
     path('posts/',include('posts.urls')),
-    path('downloads/',views.downloads),
+    path('downloads/', include('downloads.urls')),
+    path('users/',include('users.urls')),
 ]
 
 
 urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

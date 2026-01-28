@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+{% block title  %}
+   Elevate Media
+{% endblock  %}
+{%  block content %}
+ <h1>Elevate Media</h1>
+
+<a href="?category=video">Videos</a> |
+<a href="?category=audio">Audios</a> |
+<a href="?category=pdf">PDFs</a> |
+<a href="?category=app">Apps</a> |
+<a href="/downloads/">All</a>
+
+<hr>
+
+{% for file in files %}
+<h3>{{ file.title }}</h3>
+
+{% if file.category == 'video' %}
+    <a href="{% url 'stream_video' file.id %}">▶ Watch</a>
+{% elif file.category == 'audio' %}
+    <audio controls>
+        <source src="{{ file.file.url }}">
+    </audio>
+{% endif %}
+
+<br>
+<a href="{% url 'download_file' file.id %}">⬇ Download</a>
+<hr>
+{% endfor %}
+
+{% endblock  %}
